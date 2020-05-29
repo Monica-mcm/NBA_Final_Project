@@ -17,6 +17,7 @@ Variables we will keep:
 - Total Minutes Player (MP)
 - Points Scored (PTS)
 - Player Efficiency Rate (PER)
+- Most Valuable Player (MVP)
 
 Project route:
 - Clean the CSVs using Python Pandas and SQL DataBase
