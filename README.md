@@ -21,8 +21,8 @@ Variables we will keep:
 
 Project route:
 - Clean the CSVs using Python Pandas and SQL DataBase
-- Perform webcrapping from and online table to extract rookie's information (ROY)
-- Connect to the Google Collaboratory to split the data and train the algorithm
+- Perform webscrapping from and online table to extract rookie's information (ROY)
+- Connect to Google Collab to split the data and train the algorithm
 - Create a webpage with CSS and add text and visuals. The Webpage will have an input that searches for the result.
 - Javascript Plotly
 
