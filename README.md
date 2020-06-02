@@ -8,12 +8,13 @@ Glosary available in: https://www.basketball-reference.com/about/glossary.html
 
 Variables we will keep:
 - Name
-- Age
+- Age *
 - Weight
 - Heigh
 - College
 - Team
 - Position played
+- Games Played (G) *
 - Total Minutes Player (MP)
 - Points Scored (PTS)
 - Player Efficiency Rate (PER)
