@@ -21,11 +21,10 @@ Variables we will keep:
 - Most Valuable Player (MVP)
 
 Project route:
-- Clean the CSVs using Python Pandas and SQL DataBase
+- Clean the CSVs using Python Pandas
 - Perform webscrapping from and online table to extract the Most Valuable Player (MVP) information
 - Connect to Google Collab to split the data and train the algorithm
-- Create a webpage with CSS and add text and visuals. The Webpage will have an input that searches for the result.
-- Javascript Plotly
+- Create a webpage with CSS and add text and visuals. The Webpage will have an input that searches for the result and graphics from Plotly.
 
 
 
