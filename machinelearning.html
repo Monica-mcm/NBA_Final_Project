@@ -18,10 +18,23 @@
        
             <!-- Main Input For Receiving Query to our ML -->
            <form action="{{ url_for('predict')}}"method="post">
-               <input type="text" name="rate" placeholder="rate" required="required" />
-               <input type="text" name="sales in first month" placeholder="sales in first month" required="required" />
-               <input type="text" name="sales in second month" placeholder="sales in second month" required="required" />
-               <button type="submit" class="btn btn-primary btn-block btn-large">Predict sales in third month</button>
+               <input type="text" name="Year" placeholder="year" required="required" />
+               <input type="text" name="Age" placeholder="age" required="required" />
+               <input type="text" name="Games (G)" placeholder="Games" required="required" />
+               <input type="text" name="Games Started (GS)" placeholder="Games Started" required="required" />
+               <input type="text" name="Minutes Played (MP)" placeholder="Minutes Played" required="required" />
+               <input type="text" name="Points (PTS)" placeholder="Points" required="required" />
+               <input type="text" name="Player Efficiency Rating (PER)" placeholder="Player Efficiency Rating" required="required" />
+               <input type="text" name="True Shooting Percentage  (TS%)" placeholder="True Shooting Percentage" required="required" />
+               <input type="text" name="Free Throw Rate (FTr)" placeholder="Free Throw Rate" required="required" />
+               <input type="text" name="Field Goals (FG)" placeholder="Field Goals" required="required" />
+               <input type="text" name="Field Goal Attempts (FGA)" placeholder="Field Goal Attempts" required="required" />
+               <input type="text" name="Assists (AST)" placeholder="Assists" required="required" />
+               <input type="text" name="Personal Fouls (PF)" placeholder="Personal Fouls" required="required" />
+               <input type="text" name="Height" placeholder="Height" required="required" />
+               <input type="text" name="Weight" placeholder="Weight" required="required" />
+               <input type="text" name="Years Played in NBA" placeholder="Years Played" required="required" />
+               <button type="submit" class="btn btn-primary btn-block btn-large">MVP or Not?</button>
            </form>
        
           <br>
