@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>D3Times</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+  <!-- <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/d3Style.css">-->
+
+</head>
+
+<body>
+
+    <body style="background: #000;">
+        <div class="login">
+           <h1>Sales Forecasting</h1>
+       
+            <!-- Main Input For Receiving Query to our ML -->
+           <form action="{{ url_for('predict')}}"method="post">
+               <input type="text" name="rate" placeholder="rate" required="required" />
+               <input type="text" name="sales in first month" placeholder="sales in first month" required="required" />
+               <input type="text" name="sales in second month" placeholder="sales in second month" required="required" />
+               <button type="submit" class="btn btn-primary btn-block btn-large">Predict sales in third month</button>
+           </form>
+       
+          <br>
+          <br>
+          {{ prediction_text }}
+  
+</body>
+
+</html>
