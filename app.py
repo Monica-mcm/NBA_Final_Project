@@ -23,7 +23,7 @@ def predict():
 @app.route('/plots')
 def results():
 
-    return jsonify(output)
+    return render_template('Plots_Javascript/index.html')
 
 if __name__ == "__main__":
     app.run(debug=True)
