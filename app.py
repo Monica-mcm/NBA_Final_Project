@@ -3,7 +3,7 @@ from flask import Flask, request, jsonify, render_template
 import pickle
 
 app = Flask(__name__)
-model = pickle.load(open('model.pkl', 'rb'))
+model = pickle.load(open('mod1.pkl', 'rb'))
 
 @app.route('/')
 def home():
@@ -21,7 +21,7 @@ def predict():
     return render_template('machinelearning.html', prediction_text='The player will be {} MVP'.format(output))
 
 @app.route('/plots')
-def results():
+def plots():
 
     return render_template('Plots_Javascript/index.html')
 
