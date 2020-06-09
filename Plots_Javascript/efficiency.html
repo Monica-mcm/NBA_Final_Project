@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <title>NBA Statistics</title>
+  <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">-->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type ="text/css" href="style_dropdown.css">
+  <link rel="stylesheet" type ="text/css" href="style.css">
+  
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+</head>
+
+</head>
+<div id="wrapper">
+  <div id="man">
+    
+        <div class="container"></div>
+					<div class="dropdown">
+					  <button class="btn btn-outline-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+						Menu
+					  </button>
+					  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+              <a class="dropdown-item" href="NBATemplate.html">Home</a>
+              <a class="dropdown-item" href="performance.html">MVP Performance</a>
+              <a class="dropdown-item" href="efficiency.html">MVP Efficiency</a>
+						  <a class="dropdown-item" href="#">MVP Prediction</a>
+				  </div>
+				</div>
+  
+	
+        <div class="container">
+          <div class="row">
+            <div class="col-xs-12 col-md-12">
+              <h1 align="center", style="color:#FFFFFF";>MVP Efficiency</h1>
+            </div>
+          </div>
+        </div>  
+    
+          <div class="container">
+    
+            <div class="row">
+              <div class="col-md-2">
+                <div class="well">
+                 <h5 style="color:#FFFFFF";>Select an age Player</h5>
+                   <select id="selDataset" onchange="builtcharts(this.value)"></select>
+                </div>   
+              </div>    
+            </div>
+          </div>
+   
+         
+          <div class="col-xs-12 col-md-12">
+               <div id="radar_chart"> </div>
+            </div>
+            
+    
+</div>
+  
+  <!-- Footer-->
+  <div id="footer">
+   
+  </div>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+
+   
+  <script type="text/javascript" src="mvp_radar_chart.js"></script>
+  
+   
+  
+
+</body>
+
+</html>
+	
+	

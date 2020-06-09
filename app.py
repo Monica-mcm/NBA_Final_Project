@@ -4,6 +4,7 @@ import pandas as pd
 import tensorflow as tf
 import keras
 from keras.models import load_model
+import os
 
 # instantiate flask 
 app = Flask(__name__)
@@ -44,9 +45,15 @@ def predict():
     #start the flask app, allow remote connections 
 #app.run(host='0.0.0.0')
 
-@app.route('/line_chart')
-def line_chart():
-    return render_template('index.html')
+
+@app.route('/performance')
+def performance():
+    return render_template('performance.html')
+
+@app.route('/efficiency')
+def efficiency():
+    return render_template('efficiency.html')
+
 
 if __name__ == "__main__":
     app.run(debug=True)

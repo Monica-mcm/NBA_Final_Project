@@ -1,5 +1,5 @@
  function builtcharts(player){
-    d3.csv("mvp_winners.csv").then(function(Data) {
+    d3.csv("static/mvp_winners.csv").then(function(Data) {
      
      var player_filter = Data.filter(d => d.Player == player);
      console.log(player_filter)
