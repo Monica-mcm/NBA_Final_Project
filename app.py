@@ -1,10 +1,11 @@
 # Load libraries
-from flask import Flask, render_template, request, redirect, url_for
+from flask import Flask, render_template, request, redirect, url_for, jsonify
 import pandas as pd
+import numpy as np
 import tensorflow as tf
 import keras
 from keras.models import load_model
-import os
+import sys
 
 # instantiate flask 
 app = Flask(__name__)
@@ -28,23 +29,13 @@ model = load_model('ML_Process/NBA2.h5')
 def home():
     return render_template('NBATemplate.html')
 
-@app.route("/predict", methods=["GET","POST"])
+@app.route('/predict', methods=['POST', 'GET'])
 def predict():
-    data = {"success": False}
-    params = flask.request.json
-    if (params == None):
-       params = flask.request.args
-    #if parameters are found, retun a prediction
-    if (params != None):
-       x=pd.DataFrame.from_dict(params, orient='index').transpose()
-       with graph.as_default():
-         data["prediction"] = str(model.predict(x)[0][0])
-         data["success"] = True
-    #return a response in json fomat 
-    return flask.jsonify(data)    
-    #start the flask app, allow remote connections 
-#app.run(host='0.0.0.0')
-
+    int_features = [(x) for x in request.form.values()]
+    final_features = np.array(int_features)
+    prediction = model.predict(final_features)
+    output = round(prediction[0], 2)
+    return render_template('machinelearning.html', prediction_text=output)
 
 @app.route('/performance')
 def performance():
@@ -53,7 +44,6 @@ def performance():
 @app.route('/efficiency')
 def efficiency():
     return render_template('efficiency.html')
-
 
 if __name__ == "__main__":
     app.run(debug=True)
