@@ -34,7 +34,7 @@ a:hover {
 }
 
 body {
-	background: white url(images/bg.jpg) repeat-x;
+	background: white url(img/bg.jpg) repeat-x;
 	font: 11px tahoma, verdana, sans-serif;
 	color: #F4B79A;
 	padding: 20px;
@@ -47,7 +47,7 @@ h3 {
 	text-align: left;
 	margin: auto;
 	width: 778px;
-	background: url(images/body_bg.jpg);
+	background: url(img/body_bg.jpg);
 }
 #nav {
 	float: left;
@@ -62,33 +62,33 @@ h3 {
 	padding-right: 5px;
 }
 .drk {
-	background: left url(images/drk_bg.gif) repeat-y;
+	background: left url(img/drk_bg.gif) repeat-y;
 }
 .drk .top {
-	background: top left url(images/drk_top.gif) no-repeat;
+	background: top left url(img/drk_top.gif) no-repeat;
 }
 .drk .bot {
-	background: bottom left url(images/drk_top-17.gif) no-repeat;
+	background: bottom left url(img/drk_top-17.gif) no-repeat;
 	padding: 10px;
 }
 .lit {
-	background: left url(images/lit_bg.gif) repeat-y;
+	background: left url(img/lit_bg.gif) repeat-y;
 }
 .lit .top {
-	background: top left url(images/lit_top.gif) no-repeat;
+	background: top left url(img/lit_top.gif) no-repeat;
 }
 .lit .bot {
-	background: bottom left url(images/lit_bot.gif) no-repeat;
+	background: bottom left url(img/lit_bot.gif) no-repeat;
 }
 .pad {
 	padding: 11px 16px;
 }
 .diamond {
 	padding-left: 12px;
-	background: 0px 4px url(images/bullet_drk_diamond.gif) no-repeat;
+	background: 0px 4px url(img/bullet_drk_diamond.gif) no-repeat;
 }
 .lit .diamond {
-	background: 0px 4px url(images/bullet_lit_diamond.gif) no-repeat;	
+	background: 0px 4px url(img/bullet_lit_diamond.gif) no-repeat;	
 }
 h3 {
 	color: #fff;
@@ -139,11 +139,11 @@ h3 {
 }
 .drk h3 {
 	padding-left: 12px;
-	background: 0px 4px url(images/bullet_drk_arr.gif) no-repeat;
+	background: 0px 4px url(img/bullet_drk_arr.gif) no-repeat;
 }
 .lit h3 {
 	padding-left: 12px;
-	background: 0px 4px url(images/bullet_lit_arr.gif) no-repeat;
+	background: 0px 4px url(img/bullet_lit_arr.gif) no-repeat;
 }
 .event {
 	float: left;
@@ -174,7 +174,7 @@ h3 {
 	padding-left: 28px;
 }
 #foot {
-	background: url(images/foot_bg.jpg) repeat-x;
+	background: url(img/foot_bg.jpg) repeat-x;
 	color: #362E2B;
 	width: 778px;
 	text-align: left;
@@ -183,11 +183,11 @@ h3 {
 	position: relative;
 }
 #foot-left {
-	background: top left url(images/foot_left.jpg) no-repeat;
+	background: top left url(img/foot_left.jpg) no-repeat;
 	padding: 15px 0;
 }
 #foot-ball {
-	background: top left url(images/foot_right.jpg) no-repeat;
+	background: top left url(img/foot_right.jpg) no-repeat;
 	position: absolute;
 	left: 652px;
 	top: -62px;
@@ -195,6 +195,6 @@ h3 {
 	height: 110px;
 }
 #man {
-	background: bottom left url(images/pic_1.jpg) no-repeat;
+	background: bottom left url(img/pic_1.jpg) no-repeat;
 	padding-bottom: 1px;
 }

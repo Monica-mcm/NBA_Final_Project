@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="en-us">
 <head>
   <meta charset="UTF-8">
-  <title>NBA Stadistics</title>
+  <title>NBA Statistics</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />
+  <!--<link rel="stylesheet" href="style.css" type="text/css" charset="utf-8" />-->
+  <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/style.css') }}">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
 </head>
 
@@ -27,8 +27,10 @@
               Plots
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">MVP Performance</a>
-              <a class="dropdown-item" href="#">MVP Efficiency Rate</a>
+              <a class="dropdown-item" href="templates/index.html">MVP Performance</a>
+              <a class="dropdown-item" href="templates/index.html">MVP Efficiency Rate</a>
+              <a class="dropdown-item" href="templates/machinelearning.html">MVP Prediction</a>
+
             </div>
           </li>
         </ul>
@@ -39,7 +41,7 @@
         <div class="top">
           <div class="bot">
             <div class="pad">
-              <h2 class="display-4">NBA Stadistics Project</h2>
+              <h2 class="display-4">NBA Statistics Project</h2>
               <p class="lead">Welcome to the MVP player truth-teller!</p>
               <hr class="my-4">
               <p> Are you an avid basketball fan, throwing hoops in the yard or spending office hours studying every game? Want to make an impression on your friends that will leave them flabbergasted and once and for all make you the authoritative voice on anything NBA? <br/>

@@ -1,13 +1,13 @@
 # Load libraries
-import flask
+from flask import Flask, render_template, request, redirect, url_for
 import pandas as pd
 import tensorflow as tf
 import keras
 from keras.models import load_model
 
 # instantiate flask 
-app = flask.Flask(__name__)
-app.run(debug=True)
+app = Flask(__name__)
+
 
 # we need to redefine our metric function in order 
 # to use it when loading the model 
@@ -25,25 +25,28 @@ model = load_model('ML_Process/NBA2.h5')
 
 @app.route('/')
 def home():
+    return render_template('NBATemplate.html')
+
+@app.route("/predict", methods=["GET","POST"])
+def predict():
+    data = {"success": False}
+    params = flask.request.json
+    if (params == None):
+       params = flask.request.args
+    #if parameters are found, retun a prediction
+    if (params != None):
+       x=pd.DataFrame.from_dict(params, orient='index').transpose()
+       with graph.as_default():
+         data["prediction"] = str(model.predict(x)[0][0])
+         data["success"] = True
+    #return a response in json fomat 
+    return flask.jsonify(data)    
+    #start the flask app, allow remote connections 
+#app.run(host='0.0.0.0')
+
+@app.route('/line_chart')
+def line_chart():
     return render_template('index.html')
 
-#@app.route("/predict", methods=["GET","POST"])
-#def predict():
-    #data = {"success": False}
-
-    #params = flask.request.json
-    #if (params == None):
-        params = flask.request.args
-
-    # if parameters are found, return a prediction
-    # if (params != None):
-       # x=pd.DataFrame.from_dict(params, orient='index').transpose()
-       # with graph.as_default():
-          #  data["prediction"] = str(model.predict(x)[0][0])
-          # data["success"] = True
-
-    # return a response in json format 
-   # return flask.jsonify(data)    
-
-# start the flask app, allow remote connections 
-app.run(host='0.0.0.0')
+if __name__ == "__main__":
+    app.run(debug=True)
