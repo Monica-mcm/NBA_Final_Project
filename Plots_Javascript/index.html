@@ -12,6 +12,15 @@
 
 <body>
 
+  <div class="row">
+    <div class="col-md-2">
+      <div class="well">
+        <h5>Select a Player</h5>
+        <select id="selDataset" onchange="builtcharts(this.value)"></select>
+      </div>   
+    </div>    
+  </div>
+  
   <div class="container">
     <div class="row">
       <div class="col-xs-12 col-md-12">
@@ -21,18 +30,12 @@
     <div class="row">
       <div class="col-xs-12  col-md-9">
         <div id="linechart">
+          <p class="position-fixed">position-fixed</p>
           <!-- We append our chart here. -->
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="col-md-2">
-        <div class="well">
-          <h5>Test Subject ID No.:</h5>
-          <select id="selDataset" onchange="builtcharts(this.value)"></select>
-        </div>   
-      </div>    
-    </div>
+   
   </div>
 
   <div class="container">
@@ -44,6 +47,7 @@
     <div class="row">
       <div class="col-xs-12  col-md-9">
         <div id="radar_chart">
+          <p class="position-fixed">position-fixed</p>
           <!-- We append our chart here. -->
         </div>
       </div>
@@ -68,8 +72,9 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
   
-  <script type="text/javascript" src="mvp_plots.js"></script>
-
+  <script type="text/javascript" src="mvp_line_chart.js"></script>
+  <script type="text/javascript" src="mvp_radar_chart.js"></script>
+  
   
   
 
