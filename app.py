@@ -4,6 +4,7 @@ import pandas as pd
 import numpy as np
 import tensorflow as tf
 import keras
+import os
 from keras.models import load_model
 import sys
 
@@ -21,7 +22,8 @@ def auc(y_true, y_pred):
 # load the model, and pass in the custom metric function
 #global graph
 #graph = tf.get_default_graph()
-model = load_model('ML_Process/NBA2.h5')
+name = os.path.join('ML_Process','NBA.h5')
+model = load_model(name)
 
 # define a predict function as an endpoint 
 
